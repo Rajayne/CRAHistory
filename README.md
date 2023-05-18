@@ -1,12 +1,18 @@
 # Router History
 
-## Class Components
+## Class Components (Old)
 
-### Old Syntax
-
-- Use constructor to accept props
-- Must bind functions to constructor to use `this`
-
-### New Syntax
-
+- createReactClass, class extends React.Component
+- Use constructor to accept props and define state
+- Use `this` and bind functions to constructor
+- Call render() to render component
+- componentDidMount(), componentDidUpdate(), etc.
 - Use class fields
+- Define static defaultProps
+- Used mixins
+- Higher Order Components(HOC)
+- Render props
+
+## Function Components (New)
+
+- Hooks use functions instead of classes

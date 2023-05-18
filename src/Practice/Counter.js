@@ -1,26 +1,17 @@
 import React from "react";
+import useCounter from "./useCounter";
 
-class Counter extends React.Component {
-  state = { count: 0 };
+const Counter = ({ color }) => {
+  const [count, inc, dec] = useCounter(0);
 
-  increment = () => {
-    this.setState({ count: this.state.count + 1 });
-  };
-
-  decrement = () => {
-    this.setState({ count: this.state.count - 1 });
-  };
-
-  render() {
-    return (
-      <div>
-        <h1 style={{ color: this.props.color }}>Counter</h1>
-        <p>Count: {this.state.count}</p>
-        <button onClick={this.increment}>+ 1</button>
-        <button onClick={this.decrement}>- 1</button>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <h1 style={{ color: color }}>Counter</h1>
+      <p>Count: {count}</p>
+      <button onClick={dec}>- 1</button>
+      <button onClick={inc}>+ 1</button>
+    </div>
+  );
+};
 
 export default Counter;
