@@ -1,6 +1,8 @@
 import React from "react";
+import axios from "axios";
 
 const Joke = () => {
+    const url
   return (
     <div>
       <p>Joke</p>
