@@ -1,10 +1,27 @@
 import React from "react";
-import axios from "axios";
+import "./Joke.css";
 
-const Joke = () => {
+const Joke = ({ vote, votes, text, id }) => {
+  function upVote(evt) {
+    vote(id, +1);
+  }
+  function downVote(evt) {
+    vote(id, -1);
+  }
+
   return (
-    <div>
-      <p>Joke</p>
+    <div className="Joke">
+      <div className="Joke-text">{text}</div>
+      <div className="Joke-votearea">
+        <button onClick={upVote}>
+          <i className="fas fa-thumbs-up" />
+        </button>
+        <button onClick={downVote}>
+          <i className="fas fa-thumbs-down" />
+        </button>
+
+        <p>{votes}</p>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,16 @@
+@import url("https://use.fontawesome.com/releases/v5.3.1/css/all.css");
+
+.loading {
+  width: 4em;
+  margin: 200px auto 0 auto;
+  color: white;
+}
+
+.JokeList-generate {
+    background-color: tomato;
+    color: white;
+    padding: .5rem;
+    font-size: 75%;
+    border-radius: 10px;
+    margin: 1rem;
+}

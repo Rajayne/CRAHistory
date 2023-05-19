@@ -1,0 +1,24 @@
+.Joke {
+  margin-bottom: 0.75em;
+  background-color: rgb(87, 95, 103);
+  border-radius: 10px;
+  display: flex;
+}
+
+.Joke-votearea {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1rem;
+}
+
+.Joke-votearea p {
+    font-size: medium;
+  }
+
+.Joke-text {
+  float: left;
+  margin: 1rem;
+  vertical-align: middle;
+  width: 500px;
+  font-size: 1.2rem;
+}
