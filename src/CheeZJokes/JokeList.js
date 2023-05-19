@@ -31,55 +31,31 @@ const JokeList = () => {
       console.error(err);
     }
   }
+  let sortedJokes = [...jokes].sort((a, b) => b.votes - a.votes);
 
-  return (
+  if (isLoading) {
+    return (
+      <div className="loading">
+        <i className="fas fa-4x fa-spinner fa-spin" />
+      </div>
+    );
+  } else {
     <div>
       <h1>Joke List</h1>
-      <Joke />
-    </div>
-  );
+      {/* <button className="JokeList-button" onClick={generateNewJokes}>
+        Get New Jokes
+      </button> */}
+      {sortedJokes.map((j) => (
+        <Joke
+          text={j.joke}
+          key={j.id}
+          id={j.id}
+          votes={j.votes}
+          // vote={handleVote}
+        />
+      ))}
+    </div>;
+  }
 };
 
 export default JokeList;
-
-/*
-  vote(id, delta) {
-    this.setState(st => ({
-      jokes: st.jokes.map(j =>
-        j.id === id ? { ...j, votes: j.votes + delta } : j
-      )
-    }));
-  }
-
-  render() {
-    let sortedJokes = [...this.state.jokes].sort((a, b) => b.votes - a.votes);
-    if (this.state.isLoading) {
-      return (
-        <div className="loading">
-          <i className="fas fa-4x fa-spinner fa-spin" />
-        </div>
-      )
-    }
-
-    return (
-      <div className="JokeList">
-        <button
-          className="JokeList-getmore"
-          onClick={this.generateNewJokes}
-        >
-          Get New Jokes
-        </button>
-
-        {sortedJokes.map(j => (
-          <Joke
-            text={j.joke}
-            key={j.id}
-            id={j.id}
-            votes={j.votes}
-            vote={this.vote}
-          />
-        ))}
-      </div>
-    );
-  }
-  */
