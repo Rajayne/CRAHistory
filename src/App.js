@@ -1,11 +1,11 @@
 import "./App.css";
-import Counter from "./Practice/Counter";
+import JokeList from "./CheeZJokes/JokeList";
 
 function App() {
   return (
     <div className="App">
       <div className="App-content">
-        <Counter />
+        <JokeList />
       </div>
     </div>
   );

@@ -16,3 +16,4 @@
 ## Function Components (New)
 
 - Hooks use functions instead of classes
+- Use closure to store state, refs, etc.
